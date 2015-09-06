@@ -5,8 +5,8 @@ layout: default
 
   <footer class="footer-nav">
   	<p>
-  		{% if page.previous %}<a class="post-link" href="{{ page.previous.url }}">上一篇</a>{% endif %}
-  		{% if page.next %}<a class="post-link" href="{{ page.next.url }}">下一篇</a>{% endif %}
+  		{% if page.previous %}<a class="post-link" href="{{ page.previous.url }}">[上一篇]</a>{% endif %}
+  		{% if page.next %}<a class="post-link" href="{{ page.next.url }}">[下一篇]</a>{% endif %}
   	</p>
   </footer>
 
@@ -21,12 +21,8 @@ layout: default
 
   <footer class="footer-nav">
   	<p>
-  		{% if page.previous %}
-  			<a class="post-link" href="{{ page.previous.url }}">[上一篇]</a>
-  		{% endif %}
-  		{% if page.next %}
-  			<a class="post-link" href="{{ page.next.url }}">[下一篇]</a>
-  		{% endif %}
+  		{% if page.previous %}<a class="post-link" href="{{ page.previous.url }}">[上一篇]</a>{% endif %}
+  		{% if page.next %}<a class="post-link" href="{{ page.next.url }}">[下一篇]</a>{% endif %}
   	</p>
   </footer>
 
