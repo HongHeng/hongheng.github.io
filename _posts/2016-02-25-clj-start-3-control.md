@@ -1,13 +1,14 @@
 ---
 layout: post
 categories: 程序小狼
-excerpt: clojure 入门
+excerpt: 顺序 条件 循环 判断
 title: clojure入门（3）——控制与判断
 ---
 
-#clojure入门（3）——控制与判断
+##clojure入门（3）——控制与判断
 
-##控制
+###控制
+
 * 顺序
 
 ```
@@ -58,20 +59,34 @@ title: clojure入门（3）——控制与判断
 ; 简单循环
 ;--------------------------------------
 
+(let [i (atom 3)]
+  (while (pos? @i)
+    (prn @i)
+    (swap! i dec)))
+;3 2 1
+;=> nil
+
 (dotimes [i 2] (prn i))
 ;0 1
+;=> nil
 
-(doseq [i [8 9]] (prn i))
-;8 9
+(doseq [i (range 2)] (prn i))
+;0 1
+;=> nil
 
-(repeatedly 2 #(prn 1))
+(for [i (range 2)] (do (prn i) i))
+;0 1
+;=> (0 1)
+
+(repeatedly 2 #(do (prn 1) 1))
 ;1 1
-
-(range 3 7)
-;=> (3 4 5 6)
+;=> (1 1)
 
 (repeat 2 3)
 ;=> (3 3)
+
+(range 3 7)
+;=> (3 4 5 6)
 
 ;--------------------------------------
 ; mapcat(常用)
@@ -109,7 +124,7 @@ title: clojure入门（3）——控制与判断
 ;1 2
 ```
 
-##判断
+###判断
 
 * 相等：对象`identical?` 引用`＝` 数字`==`
 * 基本逻辑 `and or not not=`

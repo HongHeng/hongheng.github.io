@@ -1,13 +1,13 @@
 ---
 layout: post
 categories: 程序小狼
-excerpt: clojure 入门
+excerpt: 排序 函数 统计与重组
 title: clojure入门（4）——常用函数
 ---
 
-#clojure入门（4）——常用函数
+##clojure入门（4）——常用函数
 
-##排序
+###排序
 
 ```
 (sort-by :a [{:a 3} {:a 2} {:a 4}])
@@ -20,7 +20,7 @@ title: clojure入门（4）——常用函数
 ;=> ({:a 2} {:a 3} {:a 4})
 ```
 
-##函数
+###函数
 
 ```
 comp
@@ -29,7 +29,7 @@ complement
 fnil
 ```
 
-##统计与重组
+###统计与重组
 
 ```
 frequencies

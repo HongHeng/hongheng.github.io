@@ -1,29 +1,29 @@
 ---
 layout: post
 categories: 程序小狼
-excerpt: clojure 入门
+excerpt: 软件及工具 工作流
 title: clojure入门（1）——开发环境
 ---
 
-#clojure入门（1）——开发环境
+##clojure入门（1）——开发环境
 
-##软件及工具
+###软件及工具
 
 1. 通用IDE：IntelliJ IDEA
 2. IDEA中clojure插件：cursive
 3. clojure项目管理工具：leiningen (可用Homebrew安装，方便)
 
-##新建项目
+###新建项目
 1. File -> new Project -> leiningen -> ...
 2. terminal:`lein new`
 
-##REPL
+###REPL
 
 1. Run -> Edit Configuration -> add -> Clojure REPL -> Local
 2. Run -> Run "it"
 3. 所见即所得的交互编程试验田诞生！
 
-##实时测试
+###实时测试
 
 1. 使用midje.在project.clj中添加
 ```
